@@ -119,7 +119,30 @@ function addProduct($products)
             }
         }
     }
-    
+    function SamsungShow($products)
+    {
+        foreach ($products as $key => $value) {
+
+
+
+            foreach ($value as $ke => $val) {
+
+
+                foreach ($val as $k => $v) {
+                    
+                    if ($v['brand'] == 'Samsung') {
+                        echo "
+                            
+                            <p><b>Product ID:</b> " . $v['id'] . "</p>
+                            <p><b>Product Name:</b> " . $v['name'] . "</p>
+                            <p><b>Subcategory:</b> $ke</p>
+                            <p><b>Category:</b> $key</p><br>";
+                        
+                    }
+                }
+            }
+        }
+    }
 
     // echo $len;
 }
@@ -162,9 +185,12 @@ function addProduct($products)
         <tbody><?php mobileSubCata($products) ?></tbody>
     </table>
 
+   
+
+    <br>
+    <h2>List All Sumsung Mobile </h2>
     
-
-
+        <p><?php SamsungShow($products) ?></p>
 </body>
 
 </html>
