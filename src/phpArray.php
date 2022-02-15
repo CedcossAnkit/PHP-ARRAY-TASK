@@ -231,7 +231,7 @@ function DeleteID($products)
         </tr>
         <tbody><?php mobileSubCata($products); ?></tbody>
     </table>
-    <!-- <h2>After Updating Product Id:- PR002</h2>
+    <h2>After Updating Product Id:- PR002</h2>
     <table>
         <tr>
             <th>Category</th>
@@ -241,7 +241,7 @@ function DeleteID($products)
             <th>Brand</th>
         </tr>
         <tbody><?php UpdateID($products); ?></tbody>
-    </table> -->
+    </table>
     <h2>After deleteing Product Id:-PR003 </h2>
     <table>
         <tr>
