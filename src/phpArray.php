@@ -143,9 +143,56 @@ function addProduct($products)
             }
         }
     }
-
-    // echo $len;
 }
+function DeleteID($products)
+    {
+        foreach ($products as $key => $value) {
+
+
+
+            foreach ($value as $ke => $val) {
+
+
+                foreach ($val as $k => $v) {
+                    if ($v['id'] == 'PR003') {
+                        unset($products['Electronics']['Television'][2]);
+                    }
+                }
+            }
+        }
+        addProduct($products);
+    }
+
+    function UpdateID($products)
+    {
+        foreach ($products as $key => $value) {
+
+
+
+            foreach ($value as $ke => $val) {
+
+
+                foreach ($val as $k => $v) {
+                    if ($v['id'] == 'PR002') {
+                        
+                        $v['name']="<b>BIG-555";
+                    }
+                    echo "<tr>
+                        <td>$key</td>
+                        <td>$ke</td>
+                        <td>" . $v['id'] . "</td>
+                        <td>" . $v['name'] . "</td>
+                        <td>" . $v['brand'] . "</td>
+                     </tr>";
+                }
+            }
+        }
+        
+    }
+
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -169,7 +216,7 @@ function addProduct($products)
             <th>Name</th>
             <th>Brand</th>
         </tr>
-        <tbody><?php addProduct($products) ?></tbody>
+        <tbody><?php addProduct($products);  ?></tbody>
     </table>
 
     <br>
@@ -182,15 +229,32 @@ function addProduct($products)
             <th>Name</th>
             <th>Brand</th>
         </tr>
-        <tbody><?php mobileSubCata($products) ?></tbody>
+        <tbody><?php mobileSubCata($products); ?></tbody>
+    </table>
+    <!-- <h2>After Updating Product Id:- PR002</h2>
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Subcategory</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Brand</th>
+        </tr>
+        <tbody><?php UpdateID($products); ?></tbody>
+    </table> -->
+    <h2>After deleteing Product Id:-PR003 </h2>
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Subcategory</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Brand</th>
+        </tr>
+        <tbody><?php DeleteID($products) ?></tbody>
     </table>
 
-   
 
-    <br>
-    <h2>List All Sumsung Mobile </h2>
-    
-        <p><?php SamsungShow($products) ?></p>
 </body>
 
 </html>
