@@ -175,7 +175,7 @@ function DeleteID($products)
                 foreach ($val as $k => $v) {
                     if ($v['id'] == 'PR002') {
                         
-                        $v['name']="<b>BIG-555";
+                        $v['name']="<b></b>BIG-555";
                     }
                     echo "<tr>
                         <td>$key</td>
